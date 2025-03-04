@@ -13,25 +13,25 @@ This repository contains the final project for the Master's program in Data Scie
 
 ```
 TFM_DSMarket/
-│── data/
-│   ├── raw/             # Original, unprocessed datasets
-│   ├── processed/       # Cleaned and transformed datasets
-│   ├── external/        # Additional external data sources
+│── Preprocessing/
+│   ├── Preprocessing_datos.ipynb  # Data cleaning and transformation
+│   ├── Graficos.ipynb             # Explanation graphs of Data
+│   ├── Análisis_Ventas.ipynb      # Sales data analysis 
 │
-│── notebooks/
-│   ├── 01_data_preprocessing.ipynb  # Data cleaning and transformation
-│   ├── 02_feature_engineering.ipynb  # Feature selection and creation
-│   ├── 03_model_training.ipynb       # Model selection and training
-│   ├── 04_evaluation.ipynb           # Model evaluation and performance analysis
-│
-│── src/
-│   ├── preprocessing.py   # Data preprocessing scripts
-│   ├── modeling.py        # Model training and evaluation scripts
-│   ├── utils.py           # Utility functions
-│
-│── reports/
-│   ├── business_report.pdf  # Business-oriented documentation of results
-│   ├── model_performance/   # Visualizations and metrics for model evaluation
+|
+│── MLCluster/
+|   ├── Cluster_Productos.ipynb    # ML Cluster model for Products
+│   ├── Cluster_Tiendas.ipynb      # ML Cluster model for Shops
+|
+|
+│── MLTimeseries/
+│   ├── TimeSeries_Forecast.ipynb  # ML TimeSeries model to forecast sells 1mo
+|
+|
+│── BusinessDocs/
+│   ├── Informe_DSMarket_retail-3.pdf  # Business-oriented documentation of results
+│   ├── Presentación_DSMarket_3.pdf    # Business-oriented presentation of results
+|   ├── Visualización_Ventas(BI).pdf   # PowerBI presentation of results
 │
 │── requirements.txt    # List of dependencies
 │── README.md          # Project documentation
@@ -42,24 +42,24 @@ TFM_DSMarket/
 ## Detailed Description
 
 ### 1. Data Preprocessing
-- Located in the `data/` folder, this stage includes:
-  - Cleaning and handling missing values.
-  - Normalization and standardization.
-  - Feature selection and transformation.
-  - Integration of external data sources.
+- Located in the `Preprocessing/` folder, this stage includes:
+  - Cleaning and handling missing values (`Preprocessing_datos.ipynb`).
+  - Data visualization and exploratory analysis (`Graficos.ipynb`).
+  - Sales data analysis (`Análisis_Ventas.ipynb`).
 
 ### 2. Model Development
-- Implemented in `notebooks/` and `src/`:
-  - Various machine learning models are trained and compared.
-  - Feature engineering techniques are applied.
-  - Model selection and hyperparameter tuning are performed.
-  - Evaluation metrics and visualization of model performance.
+- Implemented in `MLCluster/` and `MLTimeseries/`:
+  - **Clustering Models** (`MLCluster/`):
+    - Product clustering for segmentation (`Cluster_Productos.ipynb`).
+    - Store clustering for regional insights (`Cluster_Tiendas.ipynb`).
+  - **Time Series Forecasting** (`MLTimeseries/`):
+    - Sales forecasting model for one-month predictions (`TimeSeries_Forecast.ipynb`).
 
 ### 3. Business Documentation
-- Results are documented in the `reports/` folder:
-  - Business insights and recommendations.
-  - Visualization of key findings.
-  - Comparison of different models and their impact on decision-making.
+- Results are documented in the `BusinessDocs/` folder:
+  - Detailed business report (`Informe_DSMarket_retail-3.pdf`).
+  - Presentation slides for business stakeholders (`Presentación_DSMarket_3.pdf`).
+  - PowerBI interactive visualization of sales data (`Visualización_Ventas(BI).pdf`).
 
 ---
 
